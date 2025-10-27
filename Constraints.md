@@ -1,3 +1,5 @@
+Below are the identified contraints:
+
 1. The AIDAP system needs to be built and then deployed in the cloud, so that it can easily scale up in the case of more users joining and be updated without the system shutting down.
 2. The AIDAP has to connect to existing university systems such as LMS, registration, calendar, etc, through using standard APIs such as REST or GraphQL, by linking to other platforms, the system can easily pull and synchronize data.
 3. Only the authenticated lecturers can publish or update course materials and announcements.
