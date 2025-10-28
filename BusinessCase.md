@@ -1,4 +1,4 @@
-Business Case
+#Business Case
 
 Universities use multiple platforms to complete basic tasks, which can include online communication, creating and distributing course materials, scheduling classes, and providing academic support to students. From a student perspective, they need to be accessing at least 3-4 separate platforms to access their necessary information, including LMS, student portal, email, and online calendars, which can be very frustrating. Lecturers and administrators also face inconveniences, where lecturers have to put in extra time to repeat announcements or make updates, and administrators have trouble communicating with everyone altogether. It is important to understand that the volume of information processed by a university rapidly increases, and the current approach makes it difficult to manage this information effectively while supporting student success.
 
