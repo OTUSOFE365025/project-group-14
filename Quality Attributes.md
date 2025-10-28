@@ -1,3 +1,5 @@
+# Quality Attributes
+
 | Quality Scenario ID | Quality Attributes | Scenario | Associated Use Case |
 |--------------------|-----------------|---------|------------------|
 | QA-1 | Security, Usability, Performance | An unauthorized user attempts to access or publish restricted course material. AIDAP denies access, ensuring that only authorized lecturers can post course material/announcements, and only authorized students can view the material. Authorized lecturers can then monitor analytics such as grades, attendance, engagement, or system usage. Data is displayed accurately in a user-friendly dashboard under normal load. Access is denied to unauthorized users quickly. | UC-1, UC-4 |
