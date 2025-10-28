@@ -10,7 +10,4 @@ Expected Benefits of AIDAP:
 - Administrators: by using the centralized communication channel, they can simplify things like policy enforcement, university-wide updates, and monitor system usage and trends through the analytical dashboards.
 - System Maintainers: the AIDAP has scalable cloud based architecture, which simplifies things like integration, deployment, monitoring and future upgrades, making it easier for system maintainers to do fixes.
 
-Business Value:
-
-AIDAP strengthens communication, reduces manual workload, and improves the overall academic experience. By centralizing information and automating routine interactions, the platform enables faster responses, fewer student support requests, and more consistent messaging across campus. As a secure and scalable cloud service, AIDAP supports long-term growth, institutional modernization, and ongoing improvements through AI-driven personalization. Overall, the platform delivers clear value by supporting student success, improving staff efficiency, and creating a more connected and intelligent digital campus environment.
 
