@@ -1,3 +1,5 @@
+# Use Case
+
 | Use Case | Description | Associated Requirement ID |
 |----------|-------------|---------------------------|
 | UC-1: Publish Course Materials, Announcement and View Analytics | The system allows an authenticated lecturer to publish course material or post a course announcement. Lecturers review summarized class analytics such as grades, attendance, engagement, and aggregated statistics. | RL2, RL8, R1, R3, RL1, RL3, RL6 |
@@ -8,3 +10,5 @@
 | UC-6: System Maintenance and Reliability | System maintainers and administrators monitor analytical dashboards that display system health, latency, and errors. They securely back up configuration and user data and can restore it when needed. The system supports many users accessing the platform at the same time. | RM2, RM6, RA4, RA7 |
 
 
+## UML Use Case Model
+<img width="1342" height="1132" alt="image" src="https://github.com/user-attachments/assets/f6e8a98c-1669-4d1e-a500-4e2e45d53db3" />
