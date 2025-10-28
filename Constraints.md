@@ -1,9 +1,6 @@
 # Constraints
 
 
-Here’s your constraints formatted as a clean GitHub-compatible Markdown table (no content changed):
-
-```markdown
 | ID | Constraint |
 |----|-------------|
 | CON-1 | The AIDAP system needs to be built and then deployed in the cloud, so that it can easily scale up in the case of more users joining and be updated without the system shutting down. |
@@ -18,4 +15,4 @@ Here’s your constraints formatted as a clean GitHub-compatible Markdown table 
 | CON-10 | The system's monitoring dashboards should display real-time data, send notifications and their access needs to be restricted to maintainers and administrators. Backups need to be secure and any restore operations need to also maintain data integrity. |
 | CON-11 | Any system updates including AI model versions and API keys, have to be deployed with zero downtime and allow rollback if needed. |
 | CON-12 | Administrators have to be able to manage any external system integrations securely, keeping proper compliance with privacy and institutional security policies. |
-```
+
