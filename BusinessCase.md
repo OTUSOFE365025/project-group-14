@@ -8,6 +8,6 @@ Expected Benefits of AIDAP:
 - Students: they will gain immediate access to their personalized schedules, due dates, reminders and announcements, helping them stay organized and improve stress levels. This will help improve overall academic performance and student engagement. 
 - Lecturers: they can save time on repetitive administrative tasks, including posting reminders and sharing updates across various platforms, while gaining fast access to their class insights and analytics. 
 - Administrators: by using the centralized communication channel, they can simplify things like policy enforcement, university-wide updates, and monitor system usage and trends through the analytical dashboards.
-- System Maintainers: the AIDAP has scalable cloud based architecture, which simplifies things like integration, deployment, monitoring and future upgrades, making it easier for system maintainers to do fixes.
+- System Maintainers: the AIDAP has scalable, cloud based architecture, which simplifies things like integration, deployment, monitoring and future upgrades, making it easier for system maintainers to do fixes.
 
 
