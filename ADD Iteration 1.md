@@ -135,36 +135,37 @@ Refine the entire system in Iteration 1 because it is greenfield.
 
 ## ADD Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose.
 
-|  | Not Addressed | Partially Addressed | Completely Addressed | Design Decisions made during the iteration |
-|--|---------------|---------------------|----------------------|-------------------------------------------|
-| UC-1 |  |  |  | The RIA client architecture properly supports uploading any content & viewing analytics functionalities. |
-| UC-2 |  |  |  | Fully supported through the responsive web/mobile dashboard that is implemented. |
-| UC-3 |  |  |  | Partially supported because synchronization components do exist but the retry and conflict resolution are not defined yet. |
-| UC-5 |  |  |  | Fully supported by the AI Execution Engine and the Chat Flow Manager. |
-| QA-1 |  |  |  | Partially supported because the Security Component isn’t defined yet. The API Gateway makes the access controlled and reliable and the RIA architecture ensures that the interface stays fast and also user-friendly. |
-| QA-2 |  |  |  | The RIA client, cloud deployment, and separation of concerns improves responsiveness and helps dashboards load quickly, but the iteration has not yet defined consistent performance guarantees. |
-| QA-3 |  |  |  | Partially supported since reliability is addressed conceptually but the failure recovery is not designed yet. |
-| QA-4 |  |  |  | AI processing is isolated in its own component, which helps keep responses fast and helps improve usability, but the specific performance guarantees have not been defined yet. |
-| CON-1 |  |  |  | Designing the system with a three-tier deployment with client, application, and database layers supports scaling in the cloud environment. |
-| CON-2 |  |  |  | Fully satisfied through API integration and synchronization components for the external systems. |
-| CON-3 |  |  |  | A Security Component was added to manage login and access control, however, the detailed role based permissions and secure session handling are not defined yet. |
-| CON-4 |  |  |  | The system includes notification handling, and notification preferences are stored in the database. However, specific notification delivery rules are not designed yet. |
-| CON-5 |  |  |  | Fully satisfied using the RIA architecture, and responsive dashboard. |
-| CON-6 |  |  |  | A Synchronization Service and API based integration were created, allowing for data syncing, but retry handling and conflict handling have not been defined yet. |
-| CON-7 |  |  |  | The Security Component and Data Access Module provide a secure boundary for retrieving student data, but detailed rules have not been defined yet. |
-| CON-8 |  |  |  | Partially addressed because the AI is isolated for faster responses, but the performance guarantees and load-balancing are not specified or defined yet. The AI Engine allows fast processing, but the set of rules for ensuring consistent 2-second responses are still to be set. |
-| CON-9 |  |  |  | No relevant decisions made |
-| CON-10 |  |  |  | No relevant decisions made |
-| CON-11 |  |  |  | No relevant decisions made |
-| CON-12 |  |  |  | No relevant decisions made |
-| CRN-1 |  |  |  | No relevant decisions made |
-| CRN-2 |  |  |  | The cloud based deployment and the service based backend allow the components to scale as the usage continues to grow. |
-| CRN-3 |  |  |  | No relevant decisions made |
-| CRN-4 |  |  |  | The system supports reliable external communication, but decisions for retries and handling failures are still to be implemented. |
-| CRN-5 |  |  |  | No relevant decisions made |
-| CRN-6 |  |  |  | No relevant decisions made |
-| CRN-7 |  |  |  | The interaction history will be stored, but the decision of how personalization will work from a user perspective has not been designed yet. |
-| CRN-8 |  |  |  | The RIA architecture ensures very consistent interface behavior across browsers and devices. |
-| CRN-9 |  |  |  | No relevant decisions made |
+| Item | Not Addressed | Partially Addressed | Completely Addressed | Design Decisions made during the iteration |
+|------|---------------|---------------------|----------------------|-------------------------------------------|
+| **UC-1** |  |  |  | The RIA client architecture properly supports uploading any content & viewing analytics functionalities. |
+| **UC-2** |  |  |  | Fully supported through the responsive web/mobile dashboard that is implemented. |
+| **UC-3** |  |  |  | Partially supported because synchronization components do exist but the retry and conflict resolution are not defined yet. |
+| **UC-5** |  |  |  | Fully supported by the AI Execution Engine and the Chat Flow Manager. |
+| **QA-1** |  |  |  | Partially supported because the Security Component isn’t defined yet. The API Gateway makes the access controlled and reliable and the RIA architecture ensures that the interface stays fast and also user-friendly. |
+| **QA-2** |  |  |  | The RIA client, cloud deployment, and separation of concerns improves responsiveness and helps dashboards load quickly, but the iteration has not yet defined consistent performance guarantees. |
+| **QA-3** |  |  |  | Partially supported since reliability is addressed conceptually but the failure recovery is not designed yet. |
+| **QA-4** |  |  |  | AI processing is isolated in its own component, which helps keep responses fast and helps improve usability, but the specific performance guarantees have not been defined yet. |
+| **CON-1** |  |  |  | Designing the system with a three-tier deployment with client, application, and database layers supports scaling in the cloud environment. |
+| **CON-2** |  |  |  | Fully satisfied through API integration and synchronization components for the external systems. |
+| **CON-3** |  |  |  | A Security Component was added to manage login and access control, however, the detailed role based permissions and secure session handling are not defined yet. |
+| **CON-4** |  |  |  | The system includes notification handling, and notification preferences are stored in the database. However, specific notification delivery rules are not designed yet. |
+| **CON-5** |  |  |  | Fully satisfied using the RIA architecture, and responsive dashboard. |
+| **CON-6** |  |  |  | A Synchronization Service and API based integration were created, allowing for data syncing, but retry handling and conflict handling have not been defined yet. |
+| **CON-7** |  |  |  | The Security Component and Data Access Module provide a secure boundary for retrieving student data, but detailed rules have not been defined yet. |
+| **CON-8** |  |  |  | Partially addressed because the AI is isolated for faster responses, but the performance guarantees and load-balancing are not specified or defined yet. The AI Engine allows fast processing, but the set of rules for ensuring consistent 2-second responses are still to be set. |
+| **CON-9** |  |  |  | No relevant decisions made |
+| **CON-10** |  |  |  | No relevant decisions made |
+| **CON-11** |  |  |  | No relevant decisions made |
+| **CON-12** |  |  |  | No relevant decisions made |
+| **CRN-1** |  |  |  | No relevant decisions made |
+| **CRN-2** |  |  |  | The cloud based deployment and the service based backend allow the components to scale as the usage continues to grow. |
+| **CRN-3** |  |  |  | No relevant decisions made |
+| **CRN-4** |  |  |  | The system supports reliable external communication, but decisions for retries and handling failures are still to be implemented. |
+| **CRN-5** |  |  |  | No relevant decisions made |
+| **CRN-6** |  |  |  | No relevant decisions made |
+| **CRN-7** |  |  |  | The interaction history will be stored, but the decision of how personalization will work from a user perspective has not been designed yet. |
+| **CRN-8** |  |  |  | The RIA architecture ensures very consistent interface behavior across browsers and devices. |
+| **CRN-9** |  |  |  | No relevant decisions made |
+
 
 
