@@ -1,1 +1,28 @@
-Include in this file the 7 steps for Iteration 1
+I# ADD Iteration 1 — AIDAP
+
+## Table of Contents
+- [Step 1: Review Inputs](#step-1-review-inputs)
+- [Step 2: Select the Drivers](#step-2-select-the-drivers)
+- [Step 3: Choose Elements to Refine](#step-3-choose-elements-to-refine)
+- [Step 4: Select Design Concepts](#step-4-select-design-concepts)
+- [Step 5: Instantiate Architectural Elements](#step-5-instantiate-architectural-elements)
+- [Step 6: Sketch Views](#step-6-sketch-views)
+- [Step 7: Analysis](#step-7-analysis)
+
+---
+
+## Step 1: Review Inputs
+
+| Category | Details |
+|---------|---------|
+| **Design Purpose** | AIDAP is a greenfield system in a mature domain. The purpose is to produce a sufficiently detailed architecture to support the construction of the AI-Powered Digital Assistant Platform. |
+| **Primary Functional Requirements** | UC-1 Lecturer workflows, UC-2 Student interaction, UC-3 Data synchronization, UC-5 AI conversational support |
+| **Quality Attribute Scenarios** | **Selected drivers:** QA-1, QA-2, QA-3, QA-4 |
+| **Constraints** | All collected constraints are included as drivers |
+| **Concerns** | All architectural concerns are included as drivers |
+
+### Context Diagram Placeholder
+> 📌 Replace once image is uploaded  
+```md
+![Context Diagram](insert-image-here.png)
+
