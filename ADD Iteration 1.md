@@ -137,6 +137,11 @@ Figure 2. Module View of AIDAP System
 
 ---
 
+<img width="1778" height="840" alt="image" src="https://github.com/user-attachments/assets/3b5ce2ff-6829-4b30-89b3-894cd700b8a2" /> <br>
+Figure 3. Initial deployment diagram for the FCAPS system 
+
+---
+
 | Element | Responsibility |
 |--------|----------------|
 | User Device (web/mobile browser) | Hosts the client side application that is used by students and lectures to access AIDAP on a web or mobile browser. Uses HTTPS to send requests to the server. |
@@ -146,6 +151,11 @@ Figure 2. Module View of AIDAP System
 | Registration System | An external system that provides academic enrollment records, and course registration information retrieved by the AIDAP using REST API. |
 | Calendar System | External calendar that provides academic deadlines, events and schedules that AIDAP syncs using REST API. |
 | Authentication System | External identification checker, that verifies user credentials allowing for secure login before accessing the AIDAP. |
+
+---
+
+<img width="792" height="1042" alt="image" src="https://github.com/user-attachments/assets/a3534d1c-9a03-40da-aad4-5061059e12fc" /> <br>
+Figure 4. Reference Architecture diagram for the FCAPS system
 
 ---
 
