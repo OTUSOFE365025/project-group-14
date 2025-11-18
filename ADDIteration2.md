@@ -46,8 +46,7 @@ Figure 5 shows an initial domain model for the system.
 Figure 6 shows the domain objects that are instantiated for the use case
 model.
 Figure 7 shows a sketch of a module view with modules that are derived
-from the business objects and associated with the primary use cases. Note
-that explicit interfaces are not shown but their existence is assumed. 
+from the business objects and associated with the primary use cases. 
 
 ---
 
@@ -208,3 +207,22 @@ Figure 11. Sequence diagram for use case UC-5
 | Data Access Module | fetchData() | Retrieves the required academic information from the database. |
 |  | returnInfo() | Sends the fetched academic data back to the AI Execution Engine. |
 | Database | Implicit method | Stores academic records and provides data needed to answer the user’s question. |
+## ADD Step 7
+| Not Addressed | Partially Addressed | Completely Addressed | Design Decisions made during the iteration |
+|---------------|----------------------|------------------------|--------------------------------------------|
+|               |                      | UC-1                   | Domain objects were identified and mapped across the UI, client and server logic, and data layer. The communication through REST/JSON now fully supports UC-1. |
+|               |                      | UC-2                   | Dashboard, Notifications, and User domain objects are identified. The key modules and their links through the cache and API Gateway are defined. |
+|               | UC-3                 |                        | External sync domain objects and modules were defined, but retry and conflict-handling are still pending. |
+|               |                      | UC-5                   | Modules supporting chat flow, academic data retrieval, and caching were mapped. Interactions through the API Gateway and the Message Handler were defined, and the REST structure also supports the end-to-end flow. |
+|               | QA-1                 |                        | Access control is set up at the API Gateway, and user and role models are defined. The full authentication flow and login handling are still pending. |
+|               | QA-2                 |                        | The Local Cache and layered structure help with the performance and reliability, but no solid performance targets or load-balancing tactics have been chosen yet. |
+|               | QA-3                 |                        | The sync components and domain objects are defined, but the retry logic and conflict-handling rules are still missing. |
+|               |                      | QA-4                   | The client-side modules, the REST interfaces, and the caching help improve the UI responsiveness, and the full flow for UC-1, UC-2, and UC-5 is now mapped successfully. |
+|               |   CON-1                    |                  | The system is split into scalable layers with the REST communication, but specific scaling techniques have not been selected yet, this will be done later on. |
+|               |                      | CON-2                  | The Sync Controller, AI Service Agent, and the external API modules were defined, supporting integration with the other systems. |
+|               |                      | CON-5                  | Dashboard domain objects and modules were identified, the data flow between the layers was defined, and the caching also supports real-time updates. |
+|               | CON-8                |                        | The AI request flow is defined and the Local Cache and Message Handler are in place, but design to fulfill the 2-second response time has not been addressed. |
+|               | CRN-2                |                        | The module breakdown supports scaling and caching improves performance, but specific load-handling strategies are still not chosen. |
+| CRN-3              |                 |                        | User and Role domain objects are mapped, and the API Gateway checks are also defined but the detailed authorization rules are still pending. |
+|               | CRN-4                |                        | External API modules and their domain model links are defined but again the retry and error-handling still needs to be designed. |
+|               |                      | CRN-7                  | The Interaction History domain object is defined, and modules for capturing and storing this data are created as well. |
