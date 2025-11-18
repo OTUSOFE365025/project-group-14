@@ -68,7 +68,7 @@ All of the architectural concerns discussed are included as drivers.
 
 ---
 <img width="1288" height="892" alt="image" src="https://github.com/user-attachments/assets/39e8ca4b-3aa4-4fb4-bf77-771e76bb03ac" />
-**Figure 1.**Context Diagram of AIDAP System
+Figure 1. Context Diagram of AIDAP System
 
 ---
 
@@ -111,6 +111,13 @@ Refine the entire system in Iteration 1 because it is greenfield.
 ---
 
 ## ADD Step 6: Sketch Views and Record Design Decisions
+
+---
+
+<img width="670" height="1184" alt="image" src="https://github.com/user-attachments/assets/ddf5bf51-5917-4132-85b1-09ce23bd101e" />
+Figure 2. Module View of AIDAP System
+
+---
 
 | Element | Responsibility |
 |--------|----------------|
