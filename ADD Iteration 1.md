@@ -11,15 +11,12 @@ I# ADD Iteration 1 — AIDAP
 
 ---
 
-# Step 1 Review Inputs
+## Step 1 Review Inputs
 
 | **Category** | **Details** |
-|--------------|-------------|
+|-------------|-------------|
 | **Design Purpose** | This is a greenfield system from a mature domain. The purpose is to produce a sufficiently detailed design to support the construction of the AI-Powered Digital Assistant Platform (AIDAP). |
-| **Primary Functional Requirements** | **UC1:** Represents core lecturer workflows  
-**UC2:** Represents core student interaction  
-**UC3:** Covers technical issues related to data synchronization  
-**UC5:** Represents the core AI interaction capability of the system |
+| **Primary Functional Requirements** | **UC1:** Represents core lecturer workflows<br>**UC2:** Represents core student interaction<br>**UC3:** Covers technical issues related to data synchronization<br>**UC5:** Represents the core AI interaction capability of the system |
 
 ---
 
