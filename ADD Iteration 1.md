@@ -96,3 +96,75 @@ Refine the entire system in Iteration 1 because it is greenfield.
 | Instantiate a Security Component for authentication and authorization | Because users can only access data they are allowed to see, an early security component is needed to manage login and permissions (CRN-3). Detailed interfaces will be defined in later iterations. |
 | Instantiate an AI Interaction Component in the application tier | To support UC-5, a component is added to handle communication with the AI model and separate conversational logic from other services. |
 
+## ADD Step 6: Sketch Views and Record Design Decisions
+
+| Element | Responsibility |
+|--------|----------------|
+| Chatbot UI | Displays the chat messages and also handles the user inputs and outputs for the conversation queries, sending them to the backend. |
+| Dashboard | The dashboard shows personalized data like the grades, schedules and important announcements. |
+| Client Data Processor | Manages the client side data logic, like validating user input, handling the sessions, formatting requests before they get sent to the API, and also managing language and preference settings. |
+| Local Cache | Temporarily stores any recent messages, announcements, and dashboard data for quick and offline access, or under weaker network conditions. |
+| API Gateway | The main entry point in between the client and the server, receives API requests, validates them and directs them through the backend, all while maintaining security. |
+| Message Handler | Manages how the messages and data are exchanged between the client and backend by structuring and interpreting the API requests as well as the response formats. |
+| Interaction Controller | Coordinates client requests to the appropriate business module, it also coordinates workflows between the different backend components that exist. |
+| Chat Flow Manager | Keeps track of context, manages the dialogue flow, and makes sure that the user interactions are consistent. |
+| AI Execution Engine | Runs the AI and natural language processing logic responsible for interpreting user questions and generating responses using the stores and live data. |
+| Data Entities | Represent the core business entities like users, courses, schedules, and announcements |
+| Data access module | Manages the connection between the business logic and the database, performing all the data retrieval and updates in a secure way; this includes reading, writing, updating user data, logging chats, etc. |
+| Helpers and Utilities | Provides the shared helper functions such as error handling, data validation, and logging, these are used across multiple layers to help keep the code clean and support backend operations. |
+| AI service agent | Connects the AIDAP with the external university systems like the LMS, calendar, registration, and email platforms to both sync and recover data from failed connection attempts. |
+
+| Element | Responsibility |
+|--------|----------------|
+| User Device (web/mobile browser) | Hosts the client side application that is used by students and lectures to access AIDAP on a web or mobile browser. Uses HTTPS to send requests to the server. |
+| AIDAP Application Server (cloud-deployed) | Hosts all the server-side business logic, including service interfaces, the API gateway, security, and all iteration components. Handles dashboard display and rendering, notifications, AI interaction, and manages synchronization. Checks requests for routing to external systems. |
+| Cloud Database Server | Stores external system’s synchronized information, user profiles, dashboard data, interaction history with the AI model, notification preferences. Accessed through SQL/ORM using the application server. |
+| LMS System | LMS system is one of the external university learning platforms from which the AIDAP system retrieves the course assignments, materials, grades and analytics using REST API. |
+| Registration System | An external system that provides academic enrollment records, and course registration information retrieved by the AIDAP using REST API. |
+| Calendar System | External calendar that provides academic deadlines, events and schedules that AIDAP syncs using REST API. |
+| Authentication System | External identification checker, that verifies user credentials allowing for secure login before accessing the AIDAP. |
+
+| Relationship | Description |
+|-------------|-------------|
+| Between User Device and AIDAP Application Server | Communication takes place over secure HTTPS for all client–server requests |
+| Between AIDAP Application Server and Cloud Database Server | The server communicates with the cloud database using SQL and ORM for storing and retrieving any academic data. |
+| Between AIDAP Application Server and LMS System | Integration is done using the REST APIs to fetch the course materials, grades, and analytics. |
+| Between AIDAP Application Server and Registration System | The AIDAP retrieves the enrollment and course registration data using REST APIs. |
+| Between AIDAP Application Server and Calendar System | The AIDAP retrieves the academic events and schedules by using REST APIs. |
+| Between AIDAP Application Server and Authentication System | Login authentication is performed using an Auth API |
+
+## ADD Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose.
+
+|  | Not Addressed | Partially Addressed | Completely Addressed | Design Decisions made during the iteration |
+|--|---------------|---------------------|----------------------|-------------------------------------------|
+| UC-1 |  |  |  | The RIA client architecture properly supports uploading any content & viewing analytics functionalities. |
+| UC-2 |  |  |  | Fully supported through the responsive web/mobile dashboard that is implemented. |
+| UC-3 |  |  |  | Partially supported because synchronization components do exist but the retry and conflict resolution are not defined yet. |
+| UC-5 |  |  |  | Fully supported by the AI Execution Engine and the Chat Flow Manager. |
+| QA-1 |  |  |  | Partially supported because the Security Component isn’t defined yet. The API Gateway makes the access controlled and reliable and the RIA architecture ensures that the interface stays fast and also user-friendly. |
+| QA-2 |  |  |  | The RIA client, cloud deployment, and separation of concerns improves responsiveness and helps dashboards load quickly, but the iteration has not yet defined consistent performance guarantees. |
+| QA-3 |  |  |  | Partially supported since reliability is addressed conceptually but the failure recovery is not designed yet. |
+| QA-4 |  |  |  | AI processing is isolated in its own component, which helps keep responses fast and helps improve usability, but the specific performance guarantees have not been defined yet. |
+| CON-1 |  |  |  | Designing the system with a three-tier deployment with client, application, and database layers supports scaling in the cloud environment. |
+| CON-2 |  |  |  | Fully satisfied through API integration and synchronization components for the external systems. |
+| CON-3 |  |  |  | A Security Component was added to manage login and access control, however, the detailed role based permissions and secure session handling are not defined yet. |
+| CON-4 |  |  |  | The system includes notification handling, and notification preferences are stored in the database. However, specific notification delivery rules are not designed yet. |
+| CON-5 |  |  |  | Fully satisfied using the RIA architecture, and responsive dashboard. |
+| CON-6 |  |  |  | A Synchronization Service and API based integration were created, allowing for data syncing, but retry handling and conflict handling have not been defined yet. |
+| CON-7 |  |  |  | The Security Component and Data Access Module provide a secure boundary for retrieving student data, but detailed rules have not been defined yet. |
+| CON-8 |  |  |  | Partially addressed because the AI is isolated for faster responses, but the performance guarantees and load-balancing are not specified or defined yet. The AI Engine allows fast processing, but the set of rules for ensuring consistent 2-second responses are still to be set. |
+| CON-9 |  |  |  | No relevant decisions made |
+| CON-10 |  |  |  | No relevant decisions made |
+| CON-11 |  |  |  | No relevant decisions made |
+| CON-12 |  |  |  | No relevant decisions made |
+| CRN-1 |  |  |  | No relevant decisions made |
+| CRN-2 |  |  |  | The cloud based deployment and the service based backend allow the components to scale as the usage continues to grow. |
+| CRN-3 |  |  |  | No relevant decisions made |
+| CRN-4 |  |  |  | The system supports reliable external communication, but decisions for retries and handling failures are still to be implemented. |
+| CRN-5 |  |  |  | No relevant decisions made |
+| CRN-6 |  |  |  | No relevant decisions made |
+| CRN-7 |  |  |  | The interaction history will be stored, but the decision of how personalization will work from a user perspective has not been designed yet. |
+| CRN-8 |  |  |  | The RIA architecture ensures very consistent interface behavior across browsers and devices. |
+| CRN-9 |  |  |  | No relevant decisions made |
+
+
