@@ -67,4 +67,101 @@ Figure 7. Modules that support the primary use cases
 | SyncDataMapper             | Stores records related to synchronization and failed connections. Ensures that connection is retired when needed. |
 | AIDataMapper               | Saves queries and AI responses to form an interaction history. Uses this information to make AI more accurate. |
 
----
+### Sequence Diagram UC-1: Publish Course Materials, Announcements and View Analytics
+
+Figure 8. shows the initial sequence diagram for UC-1 (publish course materials and announcements). It shows how the lecturer submits new content for publishing and how the system then processes and distributes it. Once the lecturer initiates the upload, the Client Data Processor formats all the material and forwards the request through the API Gateway for authentication. After validated the Message Handler processes the request and passes it to the Interaction Controller, storing the material through the Data Access Module and recording the publish event. Notifications are sent to the students, and the analytics are updated, then a success message is returned to the lecturer to confirm the update.
+
+| Element | Method | Description |
+|--------|--------|-------------|
+| Lecturer | uploadCourseMaterial/postAnnouncement() | Initiates action to upload course material or post an announcement |
+|  | viewAnalytics() | Displays summarized course analytics |
+| Dashboard | prepareMaterial() | Collects uploaded file content and formats it to send to the client data processor |
+|  | updateDashboard() | Updates dashboard once content is published successfully |
+| Client Data Processor | sendUploadRequest() | Sends prepared data to the backend through the API gateway |
+|  | successMessage() | Displays success message when the backend receives the request |
+| API Gateway | authenticateUser() | Sends authentication request to security to verify the lecturer |
+| Security | authenticateUser() | Verifies the lecturer and provides access |
+|  | authenticationConfirmed() | Confirms authentication |
+| Message Handler | formatRequest() | Formats the client side request so it’s compatible with the backend |
+|  | processPublishRequest() | Passes the formatted request to the Interaction Controller for execution |
+|  | formatResponse() | Formats the backend response to forward to the API gateway |
+| Interaction Controller | saveMaterial() | Saves uploaded course material and posted announcements |
+|  | notifyStudents() | Sends notifications to students when course material or announcements are posted |
+|  | recordEvent(‘material_published’) | Sends analytics and data to the Dashboard Monitor |
+|  | publishSuccess | Sends a success message when all backend operations are complete |
+| Data Access Module | insertMaterial() | Inserts the uploaded course material data/ posted announcement data into the database |
+|  | materialSaved | Confirms that the data was saved |
+| Communication Manager | notificationsSent() | Confirms that students received notifications |
+| Dashboard Monitor | logSuccess() | Updates analytics with the logged success event |
+| Database | confirmation | Confirms that the data storage was successful |
+### Sequence Diagram UC-2: Personalized Dashboard and Notifications
+
+Figure 9. presents the initial sequence diagram for UC-2 (personalized dashboard and notifications). It shows how the system first prepares and then displays the dashboard information after a student requests access. The interaction starts when the student opens the dashboard, which prompts the Client Data Processor to check the Local Cache for previously stored data. If data needs to be retrieved, the request is passed through the API Gateway for validation and then it is sent to the Message Handler. The Interaction Controller collects grades, events, and notifications through the Data Access Module and then returns them to the client. The Local Cache is updated, and then the completed dashboard is rendered for the student.
+
+| Element | Method | Description |
+|--------|--------|-------------|
+| Student | openDashboard() | Initiates the interaction so that the student can access their personalized alerts and data. |
+| Dashboard | requestDashboard() | Requests the client side processor to fetch or load the dashboard |
+|  | renderDashboard() | Displays the dashboard interface by using the provided dataset/sets. |
+| Client Data Processor | sendRequest() | After the data is prepared, this sends the dashboard request to the API Gateway |
+|  | sendResponse() | Receives the response from the API Gateway and triggers the dashboard rendering. |
+| Local Cache | readCache() | Retrieves the stored data from the local memory for faster and quicker access. |
+|  | updateCache() | Updates the cached dashboard data with the most latest information. |
+| API Gateway | validateUser() | Sends the users login token and session info to the Security component to confirm if they are allowed to access the system. |
+|  | routeRequest() | Passes on the validated request to the Message Handler where it is processed by its respective backend component. |
+|  | sendResponse() | Returns the final dashboard info from the server back to the client. |
+| Security | validateUser() | Checks that the users credentials are valid and that they have the permission to continue interaction. |
+| Message Handler | getDashboard() | Receives the dashboard access request from the API Gateway and sends it to the Interaction Controller for further processing. |
+|  | response() | Sends the completed dashboard data back to the API Gateway after all the backend processing is finished. |
+| Interaction Controller | getUserData() | Retrieves the students grades and any upcoming events from the Data Access Module. |
+|  | getNotifications() | Requests notifications from the Notification Manager so that they can be included in the dashboard view. |
+| Notification Manager | getNotifications() | Collects all the notification records from the Data Access Module and then organizes them for the display. |
+| Data Access Module | executeQuery() (for grades, events) | Runs SQL queries to collect all of the students grades and event info from the database. |
+|  | executeQuery() (for notifications) | Runs SQL queries to collect all of the students notifications from the database. |
+| Database | executeQuery() | Executes the SQL commands it receives from the Data Access Module and sends back the resulting data. |
+
+
+### Sequence Diagram UC-3: University Data Synchronization
+
+Figure 10. shows an initial sequence diagram for UC-3 (university data synchronization). It shows how the system updates local data by comparing stored data with the university’s external datasets. When triggerSync() is triggered, the AI Service Agent retrieves the current values from the Local Cache and requests updated records from the University API. The two datasets are then compared to determine necessary inserts or updates. The updated data is then forwarded to the Data Access Module and committed to the Database. After successful storage, the Local Cache is refreshed and the synchronization process completes.
+
+| Element | Method | Description |
+|--------|--------|-------------|
+| Schedular | triggerSync() | Starts synchronization process |
+| AI Service Agent | triggerSync() | Activated by the Scheduler element to start syncing |
+|  | getLocalData() | Requests the existing university data from the Local Cache for comparing. |
+|  | compareUpdate(localData,remoteData) | Compares data from the Local Cache and University API to determine differences and needed updates. |
+|  | getUniversityData() | Requests data from University API and receives returned data |
+|  | updateCache(remoteData) | Updates the Local Cache with new data to ensure consistency |
+| Data Access Model | insertOrupdate() | Sends insert/update to the Database and receives confirmation when complete |
+| Database | insertOrupdate() | Inserts or updates records from data access model. |
+| University API | getUniversityData() | receives request for university data from AI Service Agent |
+
+
+### Sequence Diagram UC-5: Access Academic Information
+
+Figure 11. shows the initial sequence diagram for UC-5 (access academic information). It shows how a student can interact with the chatbot to retrieve any academic answers. When a question is submitted, the Chatbot UI prepares the message and checks the Local Cache for an existing answer. If no answer is found, the request is authenticated through the API Gateway and forwarded to the Message Handler. The Chat Flow Manager interprets the question and retrieves the required information through the AI Execution Engine and the Data Access Module. The new generated answer is returned through the server components, it is added to the Local Cache, and then displayed to the student.
+
+| Element | Method | Description |
+|--------|--------|-------------|
+| Student | askQuestion() | Initiates the interaction by asking an academic question. |
+| Chatbot UI | prepareMessage() | Handles the user input, formats the question, and passes it to the client processor. |
+|  | renderAnswer() | Displays the final answer returned from the backend. |
+| Client Data Processor | getCachedAnswer() | Checks the Local Cache for previously retrieved answers. |
+|  | returnCachedAnswer() | Returns cached results to determine if backend access is required. |
+|  | sendRequest() | Sends the formatted request to the API Gateway. |
+|  | receiveResponse() | Receives the backend response after processing is completed. |
+|  | updateCache() | Stores new answers into the Local Cache. |
+| Local Cache | Implicit method | Temporarily stores previous answers to increase speed. |
+| API Gateway | authenticateUser() | Verifies that the user is allowed to request academic information. |
+|  | forwardRequest() | After authentication, forwards the question to the Message Handler. |
+| Security | authResult() | Returns the authentication decision back to the API Gateway. |
+| Message Handler | processQuestion() | Translates and organizes the user question, directing it to the correct backend component. |
+|  | sendResponse() | Sends the response back to the API Gateway. |
+| Chat Flow Manager | interpretQuestion() | Sends the question to the AI Engine and finds conversation context. |
+|  | buildResponse() | Prepares the final response object to send back through the server. |
+| AI Execution Engine | getAcademicInfo() | Requests the necessary data from the Data Access Module to answer the question. |
+|  | (returns) answer | Sends the interpreted and generated answer to the Chat Flow Manager. |
+| Data Access Module | fetchData() | Retrieves the required academic information from the database. |
+|  | returnInfo() | Sends the fetched academic data back to the AI Execution Engine. |
+| Database | Implicit method | Stores academic records and provides data needed to answer the user’s question. |
