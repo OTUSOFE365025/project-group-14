@@ -50,6 +50,6 @@ FIGURE 7. Modules that support the primary use cases
 | DashboardDataMapper        | Retrieves personalized dashboard data such as grades, deadlines, and notification preferences. |
 | UserDataMapper             | Stores user credentials and permissions based on the type of user. Provides a secure database that requires user authentication to enter. |
 | SyncDataMapper             | Stores records related to synchronization and failed connections. Ensures that connection is retired when needed. |
-| AIDataMApper               | Saves queries and AI responses to form an interaction history. Uses this information to make AI more accurate. |
+| AIDataMapper               | Saves queries and AI responses to form an interaction history. Uses this information to make AI more accurate. |
 
 
