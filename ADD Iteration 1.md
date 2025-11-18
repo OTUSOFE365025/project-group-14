@@ -25,21 +25,21 @@ I# ADD Iteration 1 — AIDAP
 ## Step 2: Select Drivers
 
 ### Quality Attributes
-- QA-1: Security / Usability / Performance
-- QA-2: Performance / Reliability / Availability
-- QA-3: Reliability / Interoperability
-- QA-4: Performance / Usability
+- QA-1: Security,Usability,Performance
+- QA-2: Performance,Reliability,Availability,Usability
+- QA-3: Reliability,Interoperability
+- QA-4: Performance,Usability
 
 ### Constraints
-- CON-1: Cloud-scalable deployment
-- CON-2: API-based integration with university systems
-- CON-5: Real-time dashboards responsive on web/mobile
-- CON-8: AI must respond within ~2 seconds
+- CON-1: System must be deployed in the cloud and scale with the number of users.
+- CON-2: System must connect to external university systems through standard APIs.
+- CON-5: Dashboards must provide real-time data and be responsive on both web and mobile.
+- CON-8: The AI responses must be generated within approximately two seconds.
 
 ### Concerns
-- CRN-2: System must scale under high load
-- CRN-3: Strong access control
-- CRN-4: Reliable synchronization with external systems
-- CRN-7: Personalization using interaction history
+- CRN-2: System must remain scalable even under increasing load.
+- CRN-3: Strong access control must be enforced all over.
+- CRN-4: Integration with external university systems must be reliable.
+- CRN-7: Personalization must be supported using stored interaction history
 
 
