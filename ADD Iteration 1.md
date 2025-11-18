@@ -21,10 +21,6 @@ I# ADD Iteration 1 — AIDAP
 | **Constraints** | All collected constraints are included as drivers |
 | **Concerns** | All architectural concerns are included as drivers |
 
-### Context Diagram Placeholder
-> 📌 Replace once image is uploaded  
-```md
-![Context Diagram](insert-image-here.png)
 
 ## Step 2: Select Drivers
 
