@@ -1,4 +1,4 @@
-I# ADD Iteration 1 — AIDAP
+# ADD Iteration 1 — AIDAP
 
 ## Table of Contents
 - [Step 1: Review Inputs](#step-1-review-inputs)
@@ -22,7 +22,7 @@ I# ADD Iteration 1 — AIDAP
 
 ## 2. Quality Attribute Scenarios
 
-| **Scenario ID** | **Importance to the Customer** | **Difficulty of Implementation (Architect)** |
+| **Scenario ID** | **Importance to the Customer** | **Difficulty of Implementation according to Architect** |
 |-----------------|-------------------------------|---------------------------------------------|
 | **QA1** | High | High |
 | **QA2** | High | Medium |
