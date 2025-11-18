@@ -92,7 +92,8 @@ Figure 7. Modules that support the primary use cases
 ### Sequence Diagram UC-1: Publish Course Materials, Announcements and View Analytics
 
 Figure 8. shows the initial sequence diagram for UC-1 (publish course materials and announcements). It shows how the lecturer submits new content for publishing and how the system then processes and distributes it. Once the lecturer initiates the upload, the Client Data Processor formats all the material and forwards the request through the API Gateway for authentication. After validated the Message Handler processes the request and passes it to the Interaction Controller, storing the material through the Data Access Module and recording the publish event. Notifications are sent to the students, and the analytics are updated, then a success message is returned to the lecturer to confirm the update.
-<img width="1722" height="1068" alt="image" src="https://github.com/user-attachments/assets/b3e8428f-a615-4b7d-9517-8f8a90e8a2df" />
+<img width="1722" height="1068" alt="image" src="https://github.com/user-attachments/assets/b3e8428f-a615-4b7d-9517-8f8a90e8a2df" /> <br>
+Figure 8. Sequence diagram for use case UC-1
 
 ---
 
@@ -125,7 +126,8 @@ Figure 8. shows the initial sequence diagram for UC-1 (publish course materials 
 ### Sequence Diagram UC-2: Personalized Dashboard and Notifications
 
 Figure 9. presents the initial sequence diagram for UC-2 (personalized dashboard and notifications). It shows how the system first prepares and then displays the dashboard information after a student requests access. The interaction starts when the student opens the dashboard, which prompts the Client Data Processor to check the Local Cache for previously stored data. If data needs to be retrieved, the request is passed through the API Gateway for validation and then it is sent to the Message Handler. The Interaction Controller collects grades, events, and notifications through the Data Access Module and then returns them to the client. The Local Cache is updated, and then the completed dashboard is rendered for the student.
-<img width="1710" height="1084" alt="image" src="https://github.com/user-attachments/assets/41cec8ae-3e58-4149-9da8-d9764be6364a" />
+<img width="1710" height="1084" alt="image" src="https://github.com/user-attachments/assets/41cec8ae-3e58-4149-9da8-d9764be6364a" /> <br>
+Figure 9. Sequence diagram for use case UC-2
 
 ---
 
@@ -156,7 +158,8 @@ Figure 9. presents the initial sequence diagram for UC-2 (personalized dashboard
 ### Sequence Diagram UC-3: University Data Synchronization
 
 Figure 10. shows an initial sequence diagram for UC-3 (university data synchronization). It shows how the system updates local data by comparing stored data with the university’s external datasets. When triggerSync() is triggered, the AI Service Agent retrieves the current values from the Local Cache and requests updated records from the University API. The two datasets are then compared to determine necessary inserts or updates. The updated data is then forwarded to the Data Access Module and committed to the Database. After successful storage, the Local Cache is refreshed and the synchronization process completes.
-<img width="1574" height="884" alt="image" src="https://github.com/user-attachments/assets/364f238e-8133-4dd1-9182-552b432680f0" />
+<img width="1574" height="884" alt="image" src="https://github.com/user-attachments/assets/364f238e-8133-4dd1-9182-552b432680f0" /> <br>
+Figure 10. Sequence diagram for use case UC-3
 
 ---
 
@@ -177,7 +180,8 @@ Figure 10. shows an initial sequence diagram for UC-3 (university data synchroni
 ### Sequence Diagram UC-5: Access Academic Information
 
 Figure 11. shows the initial sequence diagram for UC-5 (access academic information). It shows how a student can interact with the chatbot to retrieve any academic answers. When a question is submitted, the Chatbot UI prepares the message and checks the Local Cache for an existing answer. If no answer is found, the request is authenticated through the API Gateway and forwarded to the Message Handler. The Chat Flow Manager interprets the question and retrieves the required information through the AI Execution Engine and the Data Access Module. The new generated answer is returned through the server components, it is added to the Local Cache, and then displayed to the student.
-<img width="1754" height="1068" alt="image" src="https://github.com/user-attachments/assets/bdbf8a88-a3c6-4895-9dc8-e1d02285a6c6" />
+<img width="1754" height="1068" alt="image" src="https://github.com/user-attachments/assets/bdbf8a88-a3c6-4895-9dc8-e1d02285a6c6" /> ,br>
+Figure 11. Sequence diagram for use case UC-5
 
 ---
 
