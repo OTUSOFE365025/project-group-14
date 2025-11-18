@@ -24,12 +24,27 @@ In this iteration, the elements that will be refined are the modules located in 
 |Decompose domain objects across the layers to identify layer-specific modules and interfaces                              |This technique ensures that all the functionalities and their associated modules are identified. This decomposition is only done for the primary use cases. As the modules are separated across the layers, the architect ensures that the communication between the layers is consistent. This leads to a new architectural consideration of the interactions between layer-specific modules and interfaces.                            |
 |Use REST/JSON-based APIs for communication                              |This communication style uses a request and response which allows all parts of the system to interact with each other. This allows the modules to be tested and changed independently.                            |
 |Associate frameworks with modules in the data layer and external integration                              |Communication with the LMS, registration, and calendar systems is encapsulated in the AI Service Agent and synchronization modules.                            |
+
+---
+
 ## ADD Step 6
+
+---
+
+<img width="1740" height="882" alt="image" src="https://github.com/user-attachments/assets/cf2bbd12-0177-4f9d-98bf-674c4462dd0b" /> <br>
 Figure 5.Initial Domain Model for the System
 
+---
+
+<img width="1316" height="1074" alt="image" src="https://github.com/user-attachments/assets/5b150b2c-19f0-47e5-bd6a-64476f1574ca" /> <br>
 Figure 6. Domain objects associated with the use case mode
 
-FIGURE 7. Modules that support the primary use cases
+---
+
+<img width="1122" height="1172" alt="image" src="https://github.com/user-attachments/assets/ff093361-dddf-446a-8669-af41fbe60edb" />
+Figure 7. Modules that support the primary use cases
+
+---
 
 | Element                     | Responsibility |
 |----------------------------|----------------|
@@ -52,4 +67,4 @@ FIGURE 7. Modules that support the primary use cases
 | SyncDataMapper             | Stores records related to synchronization and failed connections. Ensures that connection is retired when needed. |
 | AIDataMapper               | Saves queries and AI responses to form an interaction history. Uses this information to make AI more accurate. |
 
-
+---
