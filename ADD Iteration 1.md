@@ -67,6 +67,10 @@ All of the architectural concerns discussed are included as drivers.
 - CRN-7: Personalization must be supported using stored interaction history
 
 ---
+<img width="1288" height="892" alt="image" src="https://github.com/user-attachments/assets/39e8ca4b-3aa4-4fb4-bf77-771e76bb03ac" />
+**Figure 1.**Context Diagram of AIDAP System
+
+---
 
 ## ADD Step 3: Choose One or More Elements of the System to Refine
 Refine the entire system in Iteration 1 because it is greenfield.
