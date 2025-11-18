@@ -180,7 +180,7 @@ Figure 10. Sequence diagram for use case UC-3
 ### Sequence Diagram UC-5: Access Academic Information
 
 Figure 11. shows the initial sequence diagram for UC-5 (access academic information). It shows how a student can interact with the chatbot to retrieve any academic answers. When a question is submitted, the Chatbot UI prepares the message and checks the Local Cache for an existing answer. If no answer is found, the request is authenticated through the API Gateway and forwarded to the Message Handler. The Chat Flow Manager interprets the question and retrieves the required information through the AI Execution Engine and the Data Access Module. The new generated answer is returned through the server components, it is added to the Local Cache, and then displayed to the student.
-<img width="1754" height="1068" alt="image" src="https://github.com/user-attachments/assets/bdbf8a88-a3c6-4895-9dc8-e1d02285a6c6" /> ,br>
+<img width="1754" height="1068" alt="image" src="https://github.com/user-attachments/assets/bdbf8a88-a3c6-4895-9dc8-e1d02285a6c6" /> <br>
 Figure 11. Sequence diagram for use case UC-5
 
 ---
