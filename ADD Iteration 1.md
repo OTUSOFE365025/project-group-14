@@ -26,13 +26,24 @@ I# ADD Iteration 1 — AIDAP
 ```md
 ![Context Diagram](insert-image-here.png)
 
-## Design Inputs Summary
+## Step 2: Select Drivers
 
-| **Category**                     | **Details** |
-|----------------------------------|-------------|
-| **Design Purpose**               | This is a greenfield system from a mature domain. The purpose is to produce a sufficiently detailed design to support the construction of the AI-Powered Digital Assistant Platform (AIDAP). |
-| **Primary Functional Requirements** | **UC1:** Represents core lecturer workflows  
-**UC2:** Represents core student interaction  
-**UC3:** Covers technical issues related to data synchronization  
-**UC5:** Supports the core AI interaction capability of the system |
+### Quality Attributes
+- QA-1: Security / Usability / Performance
+- QA-2: Performance / Reliability / Availability
+- QA-3: Reliability / Interoperability
+- QA-4: Performance / Usability
+
+### Constraints
+- CON-1: Cloud-scalable deployment
+- CON-2: API-based integration with university systems
+- CON-5: Real-time dashboards responsive on web/mobile
+- CON-8: AI must respond within ~2 seconds
+
+### Concerns
+- CRN-2: System must scale under high load
+- CRN-3: Strong access control
+- CRN-4: Reliable synchronization with external systems
+- CRN-7: Personalization using interaction history
+
 
