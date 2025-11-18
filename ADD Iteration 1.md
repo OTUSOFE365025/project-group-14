@@ -11,16 +11,43 @@ I# ADD Iteration 1 — AIDAP
 
 ---
 
-## Step 1: Review Inputs
+# Step 1 Review Inputs
 
-| Category | Details |
-|---------|---------|
-| **Design Purpose** | AIDAP is a greenfield system in a mature domain. The purpose is to produce a sufficiently detailed architecture to support the construction of the AI-Powered Digital Assistant Platform. |
-| **Primary Functional Requirements** | UC-1 Lecturer workflows, UC-2 Student interaction, UC-3 Data synchronization, UC-5 AI conversational support |
-| **Quality Attribute Scenarios** | **Selected drivers:** QA-1, QA-2, QA-3, QA-4 |
-| **Constraints** | All collected constraints are included as drivers |
-| **Concerns** | All architectural concerns are included as drivers |
+| **Category** | **Details** |
+|--------------|-------------|
+| **Design Purpose** | This is a greenfield system from a mature domain. The purpose is to produce a sufficiently detailed design to support the construction of the AI-Powered Digital Assistant Platform (AIDAP). |
+| **Primary Functional Requirements** | **UC1:** Represents core lecturer workflows  
+**UC2:** Represents core student interaction  
+**UC3:** Covers technical issues related to data synchronization  
+**UC5:** Represents the core AI interaction capability of the system |
 
+---
+
+## 2. Quality Attribute Scenarios
+
+| **Scenario ID** | **Importance to the Customer** | **Difficulty of Implementation (Architect)** |
+|-----------------|-------------------------------|---------------------------------------------|
+| **QA1** | High | High |
+| **QA2** | High | Medium |
+| **QA3** | High | High |
+| **QA4** | High | High |
+| **QA5** | Medium | Medium |
+
+From this list, QA1, QA2, QA3, and QA4 are selected as drivers.
+
+---
+
+## 3. Constraints
+
+All of the constraints discussed are included as drivers.
+
+---
+
+## 4. Concerns
+
+All of the architectural concerns discussed are included as drivers.
+
+---
 
 ## Step 2: Select Drivers
 
