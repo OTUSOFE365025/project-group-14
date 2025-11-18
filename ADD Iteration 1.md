@@ -114,7 +114,7 @@ Refine the entire system in Iteration 1 because it is greenfield.
 
 ---
 
-<img width="670" height="1184" alt="image" src="https://github.com/user-attachments/assets/ddf5bf51-5917-4132-85b1-09ce23bd101e" />
+<img width="670" height="1184" alt="image" src="https://github.com/user-attachments/assets/ddf5bf51-5917-4132-85b1-09ce23bd101e" /> <br>
 Figure 2. Module View of AIDAP System
 
 ---
