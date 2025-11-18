@@ -48,6 +48,8 @@ All of the architectural concerns discussed are included as drivers.
 
 ## Step 2: Select Drivers
 
+This is the first iteration in the design of a greenfield system, the architect keeps in mind all of the drivers that influence the general structure of the system, however, the architect must be mindful of the following:
+
 ### Quality Attributes
 - QA-1: Security,Usability,Performance
 - QA-2: Performance,Reliability,Availability,Usability
