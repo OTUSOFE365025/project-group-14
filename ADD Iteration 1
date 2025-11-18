@@ -26,3 +26,13 @@ I# ADD Iteration 1 — AIDAP
 ```md
 ![Context Diagram](insert-image-here.png)
 
+## Design Inputs Summary
+
+| **Category**                     | **Details** |
+|----------------------------------|-------------|
+| **Design Purpose**               | This is a greenfield system from a mature domain. The purpose is to produce a sufficiently detailed design to support the construction of the AI-Powered Digital Assistant Platform (AIDAP). |
+| **Primary Functional Requirements** | **UC1:** Represents core lecturer workflows  
+**UC2:** Represents core student interaction  
+**UC3:** Covers technical issues related to data synchronization  
+**UC5:** Supports the core AI interaction capability of the system |
+
