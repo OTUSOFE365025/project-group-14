@@ -1,5 +1,25 @@
 # ATAM Assessment Phase 3
 ## Utility Tree
+```
+├── Performance
+│   ├── Dashboard Latency
+│   │   └── (H,M) Dashboard loads in < 2 seconds under normal load
+│   └── Notification Throughput
+│       └── (M,M) Notifications queued within 1 second
+│
+├── Reliability
+│   └── Notification Delivery Reliability
+│       └── (H,M) Notification queue avoids any message loss
+│
+├── Availability
+│   └── Dashboard uptime
+│       └── (H,L) System accessible 99.5% of the time monthly
+│
+└── Usability
+    └── Personalized Dashboard View
+        └── (M,L) Dashboard content is accurate & relevant per‑user
+```
+
 
 ## Gathering Information
 ### Architectural Decisions
