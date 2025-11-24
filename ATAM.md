@@ -60,6 +60,19 @@ Utility
 | N3 | Asynchronous notification dispatch is separated from the page rendering, so the UI stays responsive even when many notifications are being sent. |
 
 ## Assessment Table
+| Analyzing Scenario | QA-2 |
+|--------------------|------|
+| Scenario | Student opens dashboard after new announcement |
+| Attributes | Performance, Reliability, Availability, Usability |
+| Stimulus | User loads personalized dashboard |
+| Environment | Normal operating load |
+| Response | Cached dashboard is returned and the notification is queued asynchronously |
+| **Architecture Decision** | **Sensitivity** | **Tradeoff** | **Risk** | **Non risk** |
+| AD1 - Add DashBoardCache | S1, S3 | T1 | R1 | N2 |
+| AD2 - Add NotificationManager | S2 | T2 | R2 | N1 |
+| AD3 - Use async notification delivery | S2 | T2, T3 | R2, R3 | N3 |
+| AD4 - DashboardController triggers dashboard and notifications |  |  |  | N1 |
+
 
 | Analyzing Scenario | QA-2 |
 |-------------------|------|
