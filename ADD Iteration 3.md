@@ -21,6 +21,8 @@ For the chosen scenario the elements that will be refined directly affect the av
 | Introduce asynchronous notification retrieval in NotificationManager | Prevents delay in dashboard requests by asynchronously processing notifications. |
 | Apply load balancing of requests to multiple instances of the DashBoardController | Creating replications of the DashBoardController and distributing dashboard requests among them, improves quick response under a high load. |
 
+---
+
 ## Step 5: Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
 
 | Design Decisions and Locations | Rationale |
@@ -29,6 +31,10 @@ For the chosen scenario the elements that will be refined directly affect the av
 | AsyncNotificationDispatcher | Allows notification to be delivered outside the main request flow |
 | NotificationStatusTracker | Identifies notification delays and failures without affecting the client UI. |
 
+---
+<img width="1374" height="764" alt="image" src="https://github.com/user-attachments/assets/a001a303-f3e9-4348-af83-ddf56cdb1cbe" /> <br>
+Figure 1. Component View
+
 ## Step 6: Sketch Views and Record Design Decisions 
 | Element | Responsibility |
 |--------|----------------|
@@ -36,7 +42,10 @@ For the chosen scenario the elements that will be refined directly affect the av
 | AsyncNotificationDispatcher | Delivers notifications asynchronously to prevent blocking any dashboard requests. |
 | NotificationStatusTracker | Records if each notification was successfully delivered and retries any failed ones without interrupting user experience. |
 
-## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
+<img width="1340" height="688" alt="image" src="https://github.com/user-attachments/assets/825a9b37-d588-4c86-82af-914680d21ab2" /> <br>
+Figure 2. Sequence Diagram
+
+---
 
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
@@ -47,7 +56,7 @@ For the chosen scenario the elements that will be refined directly affect the av
 | QA-3 |  |  | No restart, retry, or synchronization recovery changes were introduced. |
 | QA-4 |  |  | No changes introduced that affect AI performance. |
 |  | CON-1 |  | Performance improvements support scalability constraints. |
-|  | CON-5 |  | Dashboard is more responsive, but real-time freshness has not been addressed. |
+|  | CON-5 |  | Dashboard is more responsive, but real-time updating has not been addressed. |
 |  | CRN-2 |  | The system can handle more requests, but scalability isn’t fully addressed. |
 | CRN-4 |  |  | No new failure-handling mechanisms introduced this iteration. |
 
