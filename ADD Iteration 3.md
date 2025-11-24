@@ -43,6 +43,7 @@ Figure 1. Component View
 | AsyncNotificationDispatcher | Delivers notifications asynchronously to prevent blocking any dashboard requests. |
 | NotificationStatusTracker | Records if each notification was successfully delivered and retries any failed ones without interrupting user experience. |
 
+The following UML sequence diagram illustrates how the components introduced in this iteration exchange messages to support the QA‑2 scenario:
 <img width="1340" height="688" alt="image" src="https://github.com/user-attachments/assets/825a9b37-d588-4c86-82af-914680d21ab2" /> <br>
 Figure 2. Sequence Diagram
 
