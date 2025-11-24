@@ -32,10 +32,11 @@ For the chosen scenario the elements that will be refined directly affect the av
 | NotificationStatusTracker | Identifies notification delays and failures without affecting the client UI. |
 
 ---
+
+## Step 6: Sketch Views and Record Design Decisions
 <img width="1374" height="764" alt="image" src="https://github.com/user-attachments/assets/a001a303-f3e9-4348-af83-ddf56cdb1cbe" /> <br>
 Figure 1. Component View
 
-## Step 6: Sketch Views and Record Design Decisions 
 | Element | Responsibility |
 |--------|----------------|
 | DashboardCache | Stores recently generated dashboard data to reduce database queries and improve response time. |
