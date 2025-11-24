@@ -1,13 +1,18 @@
 # Iteration 3
 
 ## Step 2: Establish Iteration Goal by Selecting Drivers
-The goal for this iteration is to address the **QA-2 quality attribute scenario**. A student accesses their personalized dashboard during normal operation. The dashboard must remain responsive and available **at least 99.5% of the time per month**, and notifications should be delivered **quickly and without delay** under normal load.  
-This iteration focuses on improving dashboard responsiveness, notification delivery performance, and system availability during typical usage.
+The goal for this iteration is to address the **QA-2 quality attribute scenario**. We consider 4 Quality Attributes:
+- **Performance** – how fast the dashboard loads and how quickly the notifications are queued  
+- **Reliability** – whether the notifications are correctly delivered when they need to be  
+- **Availability** – the dashboard being responsive and available at least 99.5% of the time per month  
+- **Usability** – the dashboard should be presenting correct, and personalized information to the student
+  
 
+  In QA-2, a student accesses their personalized dashboard during normal operation. The dashboard must remain responsive and available **at least 99.5% of the time per month**, and notifications should be delivered **quickly and without delay** under normal load.  This iteration focuses on improving dashboard responsiveness, notification delivery performance, and system availability during typical usage.
 ---
 
 ## Step 3: Choose One or More Elements of the System to Refine
-For the chosen scenario the elements that will be refined directly affect the availability and usability of the personalized dashboard and notification system:
+For the chosen scenario the elements that will be refined directly affect the **performance, reliability, availability, and usability** of the personalized dashboard and notification system:
 - DashboardController 
 - NotificationManager
 
