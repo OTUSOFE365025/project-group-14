@@ -45,8 +45,8 @@ For the chosen scenario the elements that will be refined directly affect the av
 | | QA-3 |  |  | No restart, retry, or synchronization recovery changes were introduced. |
 | | QA-4  |  |  | No changes introduced that affect AI performance. |
 | | | CON-1  |  | Performance improvements support scalability constraints. |
-| |CON-5   |  |  | Dashboard is more responsive, but real-time freshness has not been addressed. |
-| | CRN-2  |  |  | The system can handle more requests, but scalability isn’t fully addressed. |
+| |  | CON-5  |  | Dashboard is more responsive, but real-time freshness has not been addressed. |
+| |  | CRN-2  |  | The system can handle more requests, but scalability isn’t fully addressed. |
 | CRN-4 |  |  |  | No new failure-handling mechanisms introduced this iteration. |
 
 
